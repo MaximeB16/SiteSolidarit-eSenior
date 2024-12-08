@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fil Rouge</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/sortie.css">
+    <link rel="icon" type="image/png" href="../IMAGES/logoEtoile.png">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="./index.html"><img src="../IMAGES/logo_UC_2022_350.png" alt="Logo" style="width: 100px; height: auto; margin-bottom: 1rem;"></a>
+            <a href="./mission.html" class="NavA"><b>Notre Mission</b></a>
+            <a href="./sortie.html" class="NavA"><b>Sorties</b></a>
+            <a href="#" class="NavA"><b>Contact</b></a>
+        </nav>
+        <main>
+            <!-- Cadres des sorties -->
+            <div class="Sorties">
+                <h1>Balade au marché de Noël</h1>
+                <img class ="imgBox" src="../IMAGES/MarcheDeNoel/marchedenoelMiniature.jpg" alt="Marché de noël">
+            </div>
+            <div class="Sorties">
+                <h1>Distribution de panier gourmand</h1>
+                <img class ="imgBox" src="../IMAGES/PanierGourmand/PanierGourmandMiniature.jpg" alt="Panier gourmand">
+            </div>
+        </main>
+    </div>
+
+    <!-- Pop-up pour afficher les images -->
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <span id="closePopup" class="close-button"><strong>&times;</strong></span>
+            <div class="PopH">
+                <img id="popupImage1" class="popupImage" src="" alt="Image de la sortie">
+                <p><strong>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti odio officiis, voluptatem aspernatur mollitia beatae eum quia quis doloribus. Minus ab pariatur ex mollitia expedita. Iure numquam enim ea laboriosam.</strong></p>
+            </div>
+            <div class="PopH">
+                <p><strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi dignissimos nam perferendis voluptate suscipit unde impedit officia, earum deleniti animi. Omnis quia accusamus dolor repellendus voluptatem illo distinctio fuga incidunt?</strong></p>
+                <img id="popupImage2" class="popupImage" src="" alt="Image de la sortie">
+            </div>
+            <div class="PopH">
+                <img id="popupImage3" class="popupImage" src="" alt="Image de la sortie">
+                <p><strong>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet inventore corporis aliquid rerum aliquam sunt alias quis deserunt tempore quas consequuntur nostrum impedit, assumenda, natus odio id et? Ratione, provident.</strong></p>
+            </div>
+            <video id="popupVideo" class="popupVideo" controls>
+                <source id="popupVideoSource" src="" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture vidéo.
+            </video>
+        </div>
+    </div>    
+
+    <footer>
+        <p>&copy; 2024 - Tous droits réservés</p>
+        <script src="../JS/popUpSortie.js"></script>
+    </footer>
+</body>
+</html>

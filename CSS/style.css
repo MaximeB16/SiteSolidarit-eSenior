@@ -1,0 +1,155 @@
+@font-face {
+    font-family: "Ace";
+    src: url(../FONT/animeace2_bld.otf);
+}
+
+/* HTML et body configurés en flexbox avec une hauteur complète */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Assure que la hauteur remplit tout l'écran */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Bar de navigation */
+nav {
+    position: fixed; /* Fixe la barre de navigation */
+    top: 0;          /* Colle au haut de la fenêtre */
+    left: 0;         /* Colle au côté gauche */
+    height: 100%;    /* Prend toute la hauteur de la fenêtre */
+    width: 10vw;     /* Largeur fixe pour la barre de navigation */
+    background-color: rgb(49, 136, 228);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem 0;
+    z-index: 10; /* Assure que la barre reste au-dessus du contenu principal */
+}
+
+/* Section principale */
+main {
+    margin-left: 10vw; /* Correspond à la largeur de nav */
+    padding: 2rem;
+    background-color: #f4f4f4;
+    overflow-y: auto; /* Ajoute un défilement vertical si nécessaire */
+    width: calc(100% - 10vw); /* Réduit la largeur pour exclure la barre */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    width: auto; /* Laisse de l'espace pour la barre */
+    height: 3vh;
+    margin-left: 10vw; /* Correspond à la largeur de nav */
+    position: sticky; /* Rend le footer collant */
+    bottom: 0; /* Positionne le footer au bas de la page visible */
+}
+
+/* La partie principale doit prendre tout l'espace disponible */
+.container {
+    flex: 1; /* Prend tout l'espace restant entre le header et le footer */
+    display: flex; /* Garde le contenu flexible */
+    flex-direction: row;
+}
+
+/* Liens de navigation */
+.NavA {
+    background-color: orange;
+    margin: 0.5rem 0; /* Espacement vertical entre les liens */
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 60%; /* Prend toute la largeur de la barre */
+    text-align: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+nav img {
+    background-color: white;
+    margin: 0.5rem 0;
+    padding: 0.3rem;
+    border-radius: 5px;
+    width: 70%;
+}
+
+.NavA:hover {
+    background-color: darkorange;
+}
+
+.imgBody{
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    width: 50rem;
+}
+
+.horizontal{
+    display: flex;
+    align-items: space-around;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.vertical{
+    display: flex;
+    align-items: space-around;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.Connecter, .Booster, .TousDehors{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(49, 136, 228);
+    border-radius: 5px;
+    margin: 2rem;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+.Connecter p, .Booster p, .TousDehors p{
+    align-self: flex-start;
+}
+
+h1{
+    color: white;
+    font-family: "Ace";
+    text-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#PopUp{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(49, 136, 228);
+    border-radius: 5px;
+    margin: 2rem;
+    padding: 1rem;
+    text-align: center;
+    align-items: flex-start;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+button{
+    border-radius: 5rem;
+    width: 2rem;
+    height: 2rem;
+    border: solid rgb(18, 92, 172);
+    background-color: rgb(49, 136, 228);
+    color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    text-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    align-self: flex-end;
+    font-size: 20px;
+}
+
+p{
+    color: white;
+    margin: 0.2rem;
+}

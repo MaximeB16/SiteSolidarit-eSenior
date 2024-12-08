@@ -1,0 +1,128 @@
+main {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
+    gap: 1rem; /* Espace entre les éléments */
+    overflow-y: auto; /* Active la barre de défilement verticale */
+    max-height: 80vh; /* Limite la hauteur de la grille pour laisser place à une barre de défilement */
+}
+
+.Sorties {
+    width: calc(50% - 1rem); /* Largeur fixe pour 3 colonnes */
+    aspect-ratio: 1 / 1; /* Rend les boîtes carrées */
+    box-sizing: border-box;
+    padding: 1rem;
+    background-color: rgb(49, 136, 228);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    overflow: hidden; /* Cache tout contenu qui dépasse */
+}
+
+.Sorties:hover {
+    transform: scale(1.02); /* Zoom léger au survol */
+}
+
+/* Pop-up */
+/* Style général de la pop-up */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;  /* Centre horizontalement */
+    align-items: center;      /* Centre verticalement */
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+}
+.popup.hidden {
+    display: none;
+}
+
+.popup-content {
+    position: relative;
+    background-color: rgb(49, 136, 228);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    max-height: 90%;
+    text-align: center;
+    overflow-y: auto; /* Permet le défilement vertical */
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+    scrollbar-width: thin; /* Style des scrollbars pour Firefox */
+    scrollbar-color: #ccc transparent; /* Couleur pour Firefox */
+}
+
+/* Personnalisation des scrollbars pour Chrome/Edge */
+.popup-content::-webkit-scrollbar {
+    width: 8px; /* Largeur de la scrollbar */
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+    background: #ccc; /* Couleur du curseur */
+    border-radius: 10px; /* Bordures arrondies */
+}
+
+.popup-content::-webkit-scrollbar-track {
+    background: transparent; /* Couleur de l'arrière-plan */
+}
+
+.popup-content img {
+    max-width: 20%; /* Adapte les images à la largeur de la pop-up */
+    max-height: 20%; /* Adapte les images à la hauteur de la pop-up */
+    border-radius: 10px;
+    margin: 10px auto; /* Espacement et centrage */
+    display: block;
+}
+
+.popup-content video {
+    max-width: 80%; /* Adapte la vidéo à la largeur de la pop-up */
+    max-height: 80%; /* Adapte la vidéo à la hauteur de la pop-up */
+    margin: 10px auto; /* Ajoute un espacement et centre la vidéo */
+    display: block;
+    border-radius: 10px; /* Arrondit légèrement les coins */
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
+h1{
+    font-size: 0.75rem;
+}
+
+.imgBox {
+    width: 60%; /* 80% de la largeur de la boîte */
+    height: 80%; /* Maintient le ratio de l'image */
+    object-fit: contain; /* S'assure que l'image s'adapte à la zone disponible */
+    display: block; /* Évite les marges inutiles avec inline-block */
+    margin: 0 auto; /* Centre l'image horizontalement */
+}
+
+.PopH{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.PopH p{
+    margin-left: 5rem;
+    margin-right: 5rem;
+    color: rgb(49, 136, 228);
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
